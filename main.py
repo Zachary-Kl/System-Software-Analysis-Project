@@ -8,7 +8,7 @@ pygame.init()
 
 # displaying a window of height
 # 500 and width 400
-pygame.display.set_mode((400, 500))
+pygame.display.set_mode((750, 700))
 
 # Setting name for window
 pygame.display.set_caption('Platformer')
