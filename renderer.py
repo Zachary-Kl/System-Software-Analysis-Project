@@ -10,3 +10,7 @@ class Renderer:
     def draw(self, screen):
         # draw items to a screen
         pass
+
+    def render():
+        
+        pass
