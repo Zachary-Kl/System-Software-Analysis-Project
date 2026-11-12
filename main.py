@@ -2,6 +2,7 @@
 
 # import pygame package
 import pygame
+from renderer import render
 
 # initializing imported module
 pygame.init()
