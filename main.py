@@ -6,20 +6,21 @@ from renderer import Renderer
 
 # initializing imported module
 pygame.init()
-screen = pygame.display.set_mode((750, 700))
+XScale = 750
+YScale = 700
+screen = pygame.display.set_mode((XScale, YScale))
 
 # Setting name for window
 pygame.display.set_caption('Platformer')
 # Game should be in a game folder to run properly
 original_image = pygame.image.load("Game/Sprites/background.png").convert_alpha()
-background_image = pygame.transform.scale(original_image, (750, 700))
+background_image = pygame.transform.scale(original_image, (XScale, YScale))
 # creating a bool value which checks 
 # if game is running
 running = True
 clock = pygame.time.Clock()
 
 while running:
-  
     # Check for event if user has pushed 
     # any event in queue
     for event in pygame.event.get():
