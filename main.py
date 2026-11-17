@@ -12,10 +12,12 @@ screen = pygame.display.set_mode((XScale, YScale))
 # Setting name for window
 pygame.display.set_caption('Platformer')
 # Game should be in a game folder to run properly
-original_image = pygame.image.load("Game/Sprites/background.png").convert_alpha()
+original_image = pygame.image.load("Game/Sprites/Background.png").convert_alpha()
 background_image = pygame.transform.scale(original_image, (XScale, YScale))
-# creating a bool value which checks 
-# if game is running
+player_original_image = pygame.image.load("Game/Sprites/PlayerModel.png")
+player_image = pygame.transform.scale(player_original_image, (40, 80))
+platform_original_image = pygame.image.load("Game/Sprites/Platform.png")
+platform_image = pygame.transform.scale(platform_original_image, (160, 40))
 running = True
 clock = pygame.time.Clock()
 
@@ -29,5 +31,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     screen.blit(background_image, (0,0))
+    screen.blit(player_image, (400,400))
+    screen.blit(platform_image, (500,500))
     pygame.display.flip()
     clock.tick(60)
